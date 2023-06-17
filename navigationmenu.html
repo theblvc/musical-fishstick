@@ -1,0 +1,260 @@
+<DOCTYPE html>
+  <html>
+    <link rel="stylesheet" href="menu.css" />
+    <head>
+      <title>Navigationmenu</title>
+      <style>
+        body {
+          background-image: url("meals-main2-data.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url("meals-main2-data.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="search-results"></div>
+
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search by name or ingredients"
+      />
+      <button id="search-button">Search</button>
+      <button id="order-button">Order</button>
+      <br />
+      <h1>This is the menu</h1>
+      <p>
+        <b>Appetizers:</b><br />
+        <li>Bruschetta</li>
+        <br />
+        <li>Shrimp cocktail</li>
+        <br />
+        <li>Caprese salad</li>
+        <br />
+        <li>satay</li>
+        <br />
+        <li>Stuffed mushrooms</li>
+        <br />
+        <b>Soups and Salads:</b><br />
+        <li>Caesar salad</li>
+        <br />
+        <li>Tomato basil soup</li>
+        <br />
+        <li>Greek salad</li>
+        <br />
+        <li>Lobster bisque</li>
+        <br />
+        <li>Waldorf salad</li>
+        <br />
+
+        <b>Main Courses:</b><br />
+        <li>Grilled salmon with lemon butter sauce</li>
+        <br />
+        <li>Beef tenderloin with red wine reduction</li>
+        <br />
+        <li>Chicken Parmesan</li>
+        <br />
+        <li>Vegetarian stir-fry</li>
+        <br />
+        <li>Mushroom risotto</li>
+        <br />
+
+        <b>Pasta and Noodles:</b><br />
+        <li>Spaghetti Bolognese</li>
+        <br />
+        <li>Fettuccine Alfredo</li>
+        <br />
+        <li>Pad Thai</li>
+        <br />
+        <li>Penne Arrabbiata</li>
+        <br />
+        <li>Mushroom ravioli</li>
+        <br />
+
+        <b>Seafood:</b><br />
+        <li>Grilled sea bass with mango salsa</li>
+        <br />
+        <li>Garlic butter shrimp</li>
+        <br />
+        <li>Seared scallops with citrus glaze</li>
+        <br />
+        <li>Lobster tail with drawn butter</li>
+        <br />
+        <li>Baked salmon with dill sauce</li>
+        <br />
+
+        <b>Steaks and Grilled Meats:</b><br />
+        <li>Ribeye steak</li>
+        <br />
+        <li>Grilled lamb chops</li>
+        <br />
+        <li>BBQ ribs</li>
+        <br />
+        <li>Pork tenderloin with apple chutney</li>
+        <br />
+        <li>Grilled chicken breast with mushroom sauce</li>
+        <br />
+
+        <b>Vegetarian/Vegan Options:</b><br />
+        <li>Vegetable curry</li>
+        <br />
+        <li>Quinoa-stuffed bell peppers</li>
+        <br />
+        <li>Lentil soup</li>
+        <br />
+        <li>Vegan Buddha bowl</li>
+        <br />
+        <li>Grilled vegetable skewers</li>
+        <br />
+        <b>Desserts:</b><br />
+        <li>New York cheesecake</li>
+        <br />
+        <li>Chocolate lava cake</li>
+        <br />
+        <li>Tiramisu</li>
+        <br />
+        <li>Crème brûlée</li>
+        <br />
+        <li>Fruit platter with chocolate dipping sauce</li>
+        <br />
+      </p>
+      <p>Special Offer Today</p>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const recipes = [
+            { name: "Bruschetta", ingredients: [""] },
+            { name: "Shrimp cocktail", ingredients: [""] },
+            { name: "Caprese salad", ingredients: [""] },
+            { name: "satay", ingredients: [""] },
+            { name: "Stuffed mushrooms", ingredients: [""] },
+            { name: "Caesar salad", ingredients: [""] },
+            { name: "Tomato basil soup", ingredients: [""] },
+            { name: "Greek salad", ingredients: [""] },
+            { name: "Lobster bisque", ingredients: [""] },
+            { name: "Waldorf salad", ingredients: [""] },
+            {
+              name: "Grilled salmon with lemon butter sauce",
+              ingredients: [""],
+            },
+            {
+              name: "Beef tenderloin with red wine reduction",
+              ingredients: [""],
+            },
+            { name: "Chicken Parmesan", ingredients: [""] },
+            { name: "Vegetarian stir-fry", ingredients: [""] },
+            { name: "Mushroom risotto", ingredients: [""] },
+            { name: "Spaghetti Bolognese", ingredients: [""] },
+            { name: "Fettuccine Alfredo", ingredients: [""] },
+            { name: "ad Thai", ingredients: [""] },
+            { name: "Penne Arrabbiata", ingredients: [""] },
+            { name: "Mushroom ravioli", ingredients: [""] },
+            { name: "Grilled sea bass with mango salsa", ingredients: [""] },
+            { name: "Garlic butter shrimp", ingredients: [""] },
+            { name: "Seared scallops with citrus glaze", ingredients: [""] },
+            { name: "Lobster tail with drawn butter", ingredients: [""] },
+            { name: "Baked salmon with dill sauce", ingredients: [""] },
+            { name: "Ribeye steak", ingredients: [""] },
+            { name: "Grilled lamb chops", ingredients: [""] },
+            { name: "BBQ ribs", ingredients: [""] },
+            { name: "Pork tenderloin with apple chutney", ingredients: [""] },
+            {
+              name: "Grilled chicken breast with mushroom sauce",
+              ingredients: [""],
+            },
+            { name: "Vegetable curry", ingredients: [""] },
+            { name: "Quinoa-stuffed bell peppers", ingredients: [""] },
+            { name: "Lentil soup", ingredients: [""] },
+            { name: "Vegan Buddha bowl", ingredients: [""] },
+            { name: "Grilled vegetable skewers", ingredients: [""] },
+            { name: "New York cheesecake", ingredients: [""] },
+            { name: "Chocolate lava cake", ingredients: [""] },
+            { name: "Tiramisu", ingredients: [""] },
+            { name: "Crème brûlée", ingredients: [""] },
+            {
+              name: "Fruit platter with chocolate dipping sauce",
+              ingredients: [""],
+            },
+
+            // Add more recipes...
+          ];
+
+          function performSearch(query) {
+            const matchingRecipes = recipes.filter((recipe) => {
+              const { name, ingredients } = recipe;
+              return (
+                name.toLowerCase().includes(query.toLowerCase()) ||
+                ingredients.some((ingredient) =>
+                  ingredient.toLowerCase().includes(query.toLowerCase())
+                )
+              );
+            });
+
+            const resultsContainer = document.getElementById("search-results");
+            resultsContainer.innerHTML = "";
+
+            if (matchingRecipes.length > 0) {
+              matchingRecipes.forEach((recipe) => {
+                const recipeElement = document.createElement("div");
+                recipeElement.textContent = recipe.name;
+                resultsContainer.appendChild(recipeElement);
+              });
+            } else {
+              const noResultsMessage = document.createElement("p");
+              noResultsMessage.textContent = "No matching recipes found.";
+              resultsContainer.appendChild(noResultsMessage);
+            }
+          }
+
+          document
+            .getElementById("search-input")
+            .addEventListener("input", function () {
+              const searchQuery = document.getElementById("search-input").value;
+              performSearch(searchQuery);
+              showMatchingWords(searchQuery);
+            });
+
+          function showMatchingWords(query) {
+            const wordsContainer = document.getElementById("search-results");
+            wordsContainer.innerHTML = "";
+
+            if (query.length === 0) return;
+
+            const matchingWords = [];
+            recipes.forEach((recipe) => {
+              const { name, ingredients } = recipe;
+              const allWords = [name, ...ingredients];
+              allWords.forEach((word) => {
+                if (word.toLowerCase().includes(query.toLowerCase())) {
+                  matchingWords.push(word);
+                }
+              });
+            });
+
+            matchingWords.forEach((word) => {
+              const wordElement = document.createElement("div");
+              wordElement.textContent = word;
+              wordsContainer.appendChild(wordElement);
+            });
+          }
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var orderButton = document.getElementById("order-button");
+          orderButton.addEventListener("click", function () {
+            alert("Welcome"); // Show welcome message
+            var greetings = prompt("How are you?"); // Prompt for greetings
+            var order = prompt("What would you like to order?"); // Prompt for order
+            alert("Order: " + order); // Display order
+            var question = prompt("Is there anything else?"); // Prompt for additional items
+            alert("Order placed successfully"); // Show order success message
+          });
+        });
+      </script>
+    </body>
+  </html></DOCTYPE
+>

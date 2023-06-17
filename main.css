@@ -1,0 +1,31 @@
+/*This css is for main.html*/
+img {
+    width:250px;
+    height:250px;
+    padding: 20px 40px;
+    margin-top:0 px;
+    margin-left: 250px;
+    
+     }
+  body {
+    background-color: dimgray;
+    color: black;
+    text-align: top;
+  }
+  /*This header1 is for main.html*/
+  h1 {
+    font-size: larger;
+    font-style: normal ;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+   }
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
